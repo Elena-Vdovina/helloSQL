@@ -1,8 +1,6 @@
 package lesson5.spring;
 
 import java.sql.SQLException;
-import lesson5.Event;
-import lesson5.EventDAO;
 import lesson5.User;
 import lesson5.UserDAO;
 import org.springframework.context.ApplicationContext;
@@ -19,15 +17,6 @@ public class UserDAOSpringDemo {
     }
     User user = userDAO.findByName("Vadim");
     System.out.println(user);
-    System.out.println();
-
-    EventDAO eventDAO = context.getBean(EventDAO.class);
-    for (int i = 1; i < 4; ++i) {
-      Event event = eventDAO.findById(i);
-      System.out.println(event);
-    }
-    Event event = eventDAO.findByName("Opera");
-    System.out.println(event);
   }
 
 }

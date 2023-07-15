@@ -13,16 +13,6 @@ public class UserDAODemo {
     }
     user = userDAO.findByName("Vadim");
     System.out.println(user);
-    System.out.println();
-
-    EventDAO eventDAO = new EventDAO(MyDataSource.getDataSource());
-    Event event;
-    for (int i = 1; i < 4; ++i) {
-      event = eventDAO.findById(i);
-      System.out.println(event);
-    }
-    event = eventDAO.findByName("Opera");
-    System.out.println(event);
   }
 
 }
